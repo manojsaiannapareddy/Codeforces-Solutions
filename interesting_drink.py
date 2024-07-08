@@ -5,15 +5,15 @@ def intersting_drink():
     d = [int(input().strip()) for _ in range(c)]
     b.sort()
 
-    def binary_search(prices, max_price):
-        low, high = 0, len(prices)
-        while low < high:
-            mid = (low + high) // 2
-            if prices[mid] <= max_price:
-                low = mid + 1
+    def binary_search(x, y):
+        lo, hi = 0, len(x)
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if x[mid] <= y:
+                lo = mid + 1
             else:
-                high = mid
-        return low
+                hi = mid
+        return lo
     
     results = []
     for max_price in d:
