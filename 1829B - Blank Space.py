@@ -4,7 +4,6 @@ def blank_space():
     for _ in range(t):
         n = int(input().strip())
         a = []
-        # read until we have n integers (handles split lines)
         while len(a) < n:
             a.extend(map(int, input().strip().split()))
         max_len = 0
